@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Soccer Match</string>
+
+    <string name="teamA">Brasil</string>
+    <string name="teamB">Holland</string>
+
+    <string name="goal">Goal</string>
+    <string name="foul">Foul</string>
+    <string name="cornerKick">Corner Kick</string>
+    <string name="penalty">Penalty</string>
+
+    <string name="goalsScoreA">0</string>
+    <string name="goalsScoreB">0</string>
+
+    <string name="foulScoreA">0</string>
+    <string name="foulScoreB">0</string>
+
+    <string name="cornerKickScoreA">0</string>
+    <string name="cornerKickScoreB">0</string>
+
+    <string name="penaltyScoreA">0</string>
+    <string name="penaltyScoreB">0</string>
+</resources>

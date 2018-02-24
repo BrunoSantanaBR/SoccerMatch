@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/soccerfield" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/scoreA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/teamA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="@string/teamA"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/goalA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/goal"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="48dp">
+
+                        <TextView
+                            android:id="@+id/goalScoreA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/goalsScoreA"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/penaltyA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/penalty"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/penaltyScoreA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/penaltyScoreA"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foulA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/foul"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foulScoreA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/foulScoreA"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/cornerKickA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/cornerKick"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/cornerKickScoreA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/cornerKickScoreA"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/addGoalA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="1"
+                android:text="@string/goal" />
+
+            <Button
+                android:id="@+id/addPenaltyA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="2"
+                android:text="@string/penalty" />
+
+            <Button
+                android:id="@+id/addFoulA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="3"
+                android:text="@string/foul" />
+
+            <Button
+                android:id="@+id/addCornerKickA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="4"
+                android:text="@string/cornerKick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scoreB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/teamB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="@string/teamB"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/goalB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/goal"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="48dp">
+
+                        <TextView
+                            android:id="@+id/goalScoreB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/goalsScoreB"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/penaltyB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/penalty"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/penaltyScoreB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/penaltyScoreB"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foulB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/foul"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foulScoreB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/foulScoreB"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/cornerKickB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:padding="4dp"
+                            android:text="@string/cornerKick"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/cornerKickScoreB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/cornerKickScoreB"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </TableRow>
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/addGoalB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="5"
+                android:text="@string/goal" />
+
+            <Button
+                android:id="@+id/addPenaltyB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="6"
+                android:text="@string/penalty" />
+
+            <Button
+                android:id="@+id/addFoulB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="7"
+                android:text="@string/foul" />
+
+            <Button
+                android:id="@+id/addCornerKickB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="addScore"
+                android:tag="8"
+                android:text="Corner Kick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:onClick="resetScore"
+        android:text="Reset Score" />
+
+
+</RelativeLayout>
